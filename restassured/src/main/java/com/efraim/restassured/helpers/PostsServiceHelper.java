@@ -59,4 +59,52 @@ public class PostsServiceHelper {
 
 	}
 	
+	public Response newPost(int userId, String title, String body) {
+		
+		Post newPost = new Post();
+		newPost.setUserId(userId);
+		newPost.setTitle(title);
+		newPost.setBody(body);
+		
+		Response response = 
+				RestAssured.given()
+				.contentType(ContentType.JSON)
+				.body(newPost)
+				.post(Endpoints.POSTS_CRUD)
+				.andReturn();
+		
+		return response;
+
+	}
+	
+	public Response deletePost(int postId) {
+		
+		Response response = 
+				RestAssured.given()
+				.contentType(ContentType.JSON)
+				.delete(Endpoints.POSTS_CRUD+ "/" + postId)
+				.andReturn();
+		
+		return response;
+
+	}
+	
+	public Response updatePost(int postId, int userId, String title, String body) {
+		
+		Post post = new Post();
+		post.setUserId(userId);
+		post.setTitle(title);
+		post.setBody(body);
+		
+		Response response = 
+				RestAssured.given()
+				.contentType(ContentType.JSON)
+				.body(post)
+				.put(Endpoints.POSTS_CRUD + "/" + postId)
+				.andReturn();
+		
+		return response;
+
+	}
+	
 }

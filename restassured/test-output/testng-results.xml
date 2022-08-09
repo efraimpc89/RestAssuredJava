@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-08T17:28:51 CDT" name="Default suite" finished-at="2022-08-08T17:28:56 CDT" duration-ms="5083">
+  <suite started-at="2022-08-09T15:22:54 CDT" name="Default suite" finished-at="2022-08-09T15:22:56 CDT" duration-ms="2412">
     <groups>
     </groups>
-    <test started-at="2022-08-08T17:28:51 CDT" name="Default test" finished-at="2022-08-08T17:28:56 CDT" duration-ms="5083">
-      <class name="com.efraim.restassured.tests.GET_Post_Test">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:com.efraim.restassured.tests.GET_Post_Test@63611043]" started-at="2022-08-08T17:28:51 CDT" name="initialize" finished-at="2022-08-08T17:28:52 CDT" duration-ms="961" status="PASS">
+    <test started-at="2022-08-09T15:22:54 CDT" name="Default test" finished-at="2022-08-09T15:22:56 CDT" duration-ms="2412">
+      <class name="com.efraim.restassured.tests.PUT_Post_Test">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:com.efraim.restassured.tests.PUT_Post_Test@7d9e8ef7]" started-at="2022-08-09T15:22:54 CDT" name="initialize" finished-at="2022-08-09T15:22:54 CDT" duration-ms="412" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="getAllPostsIs200()[pri:0, instance:com.efraim.restassured.tests.GET_Post_Test@63611043]" started-at="2022-08-08T17:28:52 CDT" name="getAllPostsIs200" finished-at="2022-08-08T17:28:55 CDT" duration-ms="3055" status="PASS">
+        <test-method signature="RequestForNewPost()[pri:0, instance:com.efraim.restassured.tests.PUT_Post_Test@7d9e8ef7]" started-at="2022-08-09T15:22:54 CDT" name="RequestForNewPost" finished-at="2022-08-09T15:22:56 CDT" duration-ms="1893" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getAllPostsIs200 -->
-        <test-method signature="getAllPosts_containsData()[pri:0, instance:com.efraim.restassured.tests.GET_Post_Test@63611043]" started-at="2022-08-08T17:28:55 CDT" name="getAllPosts_containsData" finished-at="2022-08-08T17:28:56 CDT" duration-ms="847" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAllPosts_containsData -->
-      </class> <!-- com.efraim.restassured.tests.GET_Post_Test -->
+        </test-method> <!-- RequestForNewPost -->
+      </class> <!-- com.efraim.restassured.tests.PUT_Post_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
