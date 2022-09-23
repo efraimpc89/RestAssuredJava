@@ -49,4 +49,11 @@ public class GET_Post_Test {
 	    Assert.assertTrue(response.getStatusCode() != 200);
 	       
 	}
+	
+	@Test
+	public void getNonExistentPostsIs404() {
+	    Response response = helper.getSinglePostResponse(99999);
+	    Assert.assertTrue(response.getStatusCode() == 404);
+	       
+	}
 }

@@ -32,13 +32,13 @@
             <artifactId>commons-lang</artifactId>
             <version>2.4</version>
         </dependency>
-		
-		<dependency>
-		    <groupId>io.qameta.allure</groupId>
-		    <artifactId>allure-testng</artifactId>
-		    <version>2.18.1</version>
+        
+        <dependency>
+		    <groupId>com.github.fge</groupId>
+		    <artifactId>json-schema-validator</artifactId>
+		    <version>2.2.6</version>
 		</dependency>
-				
+        
 	</dependencies>
 
 </project>

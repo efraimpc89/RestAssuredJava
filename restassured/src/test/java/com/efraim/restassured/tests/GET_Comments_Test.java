@@ -31,7 +31,6 @@ public class GET_Comments_Test {
 	@Test
 	public void getComments_containsData() {
 	    List<Comment> response = helper.getPostCommentsList(1);
-	    
 	    Assert.assertTrue(!response.isEmpty());
 	       
 	}

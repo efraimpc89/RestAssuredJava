@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.efraim.restassured.constants.Endpoints;
 import com.efraim.restassured.models.Post;
+import com.fasterxml.jackson.core.type.TypeReference;
 
-import io.qameta.allure.internal.shadowed.jackson.core.type.TypeReference;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -18,6 +18,10 @@ public class PostsServiceHelper {
 		RestAssured.baseURI = Endpoints.BASE_URI;
 	}
 	
+	/***
+	 * Gets a list of all posts (/posts)
+	 * @return List<Post>
+	 */
 	public List<Post> getAllPostsList(){
 		
 		Response response = 
@@ -34,6 +38,10 @@ public class PostsServiceHelper {
 
 	}
 	
+	/***
+	 * Gets a list of all posts (/posts)
+	 * @return Response
+	 */
 	public Response getAllPostsResponse(){
 		
 		Response response = 
@@ -46,6 +54,11 @@ public class PostsServiceHelper {
 
 	}
 	
+	/***
+	 * Gets a Response of a single post by Id (/posts/{id})
+	 * @param postId
+	 * @return Response
+	 */
 	public Response getSinglePostResponse(int postId){
 	
 		String url = String.format(Endpoints.GET_SINGLE_POST, postId);
@@ -60,6 +73,11 @@ public class PostsServiceHelper {
 	
 	}
 	
+	/***
+	 * Converts a Response object to a Post List
+	 * @param response
+	 * @return List<Post>
+	 */
 	public List<Post> convertResponseToPostList(Response response){
 				
 		Type type = new TypeReference<List<Post>>() {}.getType();
@@ -70,6 +88,13 @@ public class PostsServiceHelper {
 
 	}
 	
+	/***
+	 * Creates a new Post based on the parameters
+	 * @param userId
+	 * @param title
+	 * @param body
+	 * @return Response
+	 */
 	public Response newPost(int userId, String title, String body) {
 		
 		Post newPost = new Post();
@@ -88,6 +113,11 @@ public class PostsServiceHelper {
 
 	}
 	
+	/***
+	 * Deletes a post by Id
+	 * @param postId
+	 * @return Response
+	 */
 	public Response deletePost(int postId) {
 		
 		Response response = 
@@ -100,6 +130,14 @@ public class PostsServiceHelper {
 
 	}
 	
+	/***
+	 * Updates a post based on the parameters
+	 * @param postId
+	 * @param userId
+	 * @param title
+	 * @param body
+	 * @return Response
+	 */
 	public Response updatePost(int postId, int userId, String title, String body) {
 		
 		Post post = new Post();

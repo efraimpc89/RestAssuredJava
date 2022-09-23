@@ -5,8 +5,8 @@ import java.util.List;
 
 import com.efraim.restassured.constants.Endpoints;
 import com.efraim.restassured.models.Comment;
+import com.fasterxml.jackson.core.type.TypeReference;
 
-import io.qameta.allure.internal.shadowed.jackson.core.type.TypeReference;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -21,7 +21,7 @@ public class CommentsServiceHelper {
 	/***
 	 * Gets a List of all comments from a post "id" path variable (/posts/{id}/comments)
 	 * @param postId
-	 * @return
+	 * @return List<Comment>
 	 */
 	public List<Comment> getPostCommentsList(int postId){
 		
@@ -44,7 +44,7 @@ public class CommentsServiceHelper {
 	/***
 	 * Gets Response of all comments from a post "id" path variable (/posts/{id}/comments)
 	 * @param postId
-	 * @return
+	 * @return Response
 	 */
 	public Response getPostCommentsResponse(int postId){
 		
@@ -63,7 +63,7 @@ public class CommentsServiceHelper {
 	/***
 	 * Gets a List of all comments from a "postId" query variable(/comments?postId={id})
 	 * @param postId
-	 * @return
+	 * @return List<Comment>
 	 */
 	public List<Comment> getCommentsWithPostIdList(int postId){
 		
@@ -86,7 +86,7 @@ public class CommentsServiceHelper {
 	/***
 	 * Gets a Response of all comments from a "postId" query variable(/comments?postId={id})
 	 * @param postId
-	 * @return
+	 * @return Response
 	 */
 	public Response getCommentsWithPostIdResponse(int postId){
 		
@@ -105,7 +105,7 @@ public class CommentsServiceHelper {
 	/***
 	 * Converts a Response into a List of Comments
 	 * @param response
-	 * @return
+	 * @return List<Comment>
 	 */
 	public List<Comment> convertResponseToCommentsList(Response response){
 				

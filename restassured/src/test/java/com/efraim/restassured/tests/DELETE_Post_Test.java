@@ -24,7 +24,6 @@ public class DELETE_Post_Test {
 	@Test
 	public void DeletePostReturns200() {
 		Response response = helper.deletePost(1);
-	    System.out.println(response.asString());
 	    Assert.assertTrue(response.getStatusCode() == 200);
    
 	}
