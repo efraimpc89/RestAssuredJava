@@ -1,1 +1,0 @@
-{"uuid":"4a7abfa4-d901-464b-b992-fb2cbd7a5670","name":"com.efraim.restassured.tests.PUT_Post_Test","children":["da369e16-6c43-4ae8-8115-154381c4a0e3"],"befores":[{"name":"initialize","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1660076540113,"stop":1660076540699}],"afters":[],"start":1660076540056,"stop":1660076542921}

@@ -47,3 +47,4 @@ src/generated
 target
 test-output
 test-output-tests
+/*/allure-results/

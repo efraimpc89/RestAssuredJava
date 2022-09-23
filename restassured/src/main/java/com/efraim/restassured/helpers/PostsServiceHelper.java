@@ -15,10 +15,7 @@ public class PostsServiceHelper {
 
 	
 	public PostsServiceHelper(){
-	
 		RestAssured.baseURI = Endpoints.BASE_URI;
-		//RestAssured.useRelaxedHTTPSValidation(); //use only when executing on local api
-		
 	}
 	
 	public List<Post> getAllPostsList(){
@@ -47,6 +44,20 @@ public class PostsServiceHelper {
 		
 		return response;
 
+	}
+	
+	public Response getSinglePostResponse(int postId){
+	
+		String url = String.format(Endpoints.GET_SINGLE_POST, postId);
+		
+		Response response = 
+				RestAssured.given()
+				.contentType(ContentType.JSON)
+				.get(url)
+				.andReturn();
+		
+		return response;
+	
 	}
 	
 	public List<Post> convertResponseToPostList(Response response){

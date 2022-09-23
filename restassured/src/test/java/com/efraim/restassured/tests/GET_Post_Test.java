@@ -36,4 +36,17 @@ public class GET_Post_Test {
 	       
 	}
 
+	@Test
+	public void getSinglePostIs200() {
+	    Response response = helper.getSinglePostResponse(1);
+	    Assert.assertTrue(response.getStatusCode() == 200);
+	       
+	}
+	
+	@Test
+	public void getNonExistentPostsIsNot200() {
+	    Response response = helper.getSinglePostResponse(99999);
+	    Assert.assertTrue(response.getStatusCode() != 200);
+	       
+	}
 }

@@ -1,1 +1,0 @@
-{"uuid":"d93800f6-ebe3-419b-819d-4c7c4ccea9c5","name":"com.efraim.restassured.tests.POST_Post_Test","children":["b8840812-057f-4ec0-9666-f5e99ed2b11d"],"befores":[{"name":"initialize","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1660068870431,"stop":1660068870859}],"afters":[],"start":1660068870391,"stop":1660068872899}
