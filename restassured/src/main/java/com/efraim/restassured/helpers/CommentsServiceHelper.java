@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class CommentsServiceHelper {
@@ -115,6 +116,15 @@ public class CommentsServiceHelper {
 		
 		return commentsList;
 
+	}
+	
+	public void getAllCommentsSchemaValidation(){
+		RestAssured.given()
+		.contentType(ContentType.JSON)
+		.get(Endpoints.GET_ALL_COMMENTS)
+		.then()
+			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("resources/GetAllCommentsSchema.json"))
+			.statusCode(200);
 	}
 	
 	

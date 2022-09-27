@@ -56,4 +56,9 @@ public class GET_Post_Test {
 	    Assert.assertTrue(response.getStatusCode() == 404);
 	       
 	}
+	
+	@Test
+	public void getPostsSchemaValidation() {
+	    helper.getAllPostSchemaValidation();       
+	}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 
 public class PostsServiceHelper {
@@ -154,6 +155,15 @@ public class PostsServiceHelper {
 		
 		return response;
 
+	}
+	
+	public void getAllPostSchemaValidation(){
+		RestAssured.given()
+		.contentType(ContentType.JSON)
+		.get(Endpoints.POSTS_CRUD)
+		.then()
+			.body(JsonSchemaValidator.matchesJsonSchemaInClasspath("resources/GetAllPostsSchema.json"))
+			.statusCode(200);
 	}
 	
 }

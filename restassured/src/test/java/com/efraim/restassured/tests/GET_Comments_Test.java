@@ -34,5 +34,10 @@ public class GET_Comments_Test {
 	    Assert.assertTrue(!response.isEmpty());
 	       
 	}
+		
+	@Test
+	public void getAllCommentsSchemaValidation() {
+	    helper.getAllCommentsSchemaValidation();       
+	}
 
 }

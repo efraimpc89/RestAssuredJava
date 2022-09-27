@@ -21,14 +21,12 @@ public class POST_Post_Test {
 	@Test
 	public void RequestForNewPost() {
 	    Response response = helper.newPost(1,"efra", "prueba");
-	    System.out.println(response.asString());
 	    Assert.assertTrue(response.getStatusCode() == 201);     
 	}
 	
 	@Test
 	public void NoDataNewPostIsNot201() {
 	    Response response = helper.newPost(-1,"", "");
-	    System.out.println(response.asString());
 	    Assert.assertTrue(response.getStatusCode() == 201);     
 	}
 	
